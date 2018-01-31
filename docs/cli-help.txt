@@ -443,6 +443,8 @@ plugins:
                         using BIND for DNS). (default: False)
   --dns-route53         Obtain certificates using a DNS TXT record (if you are
                         using Route53 for DNS). (default: False)
+  --dns-rackspace       Obtain certificates using a DNS TXT record (if you are
+                        using Rackspace CloudDNS for DNS). (default: False)
 
 apache:
   Apache Web Server plugin - Beta
@@ -477,6 +479,15 @@ certbot-route53:auth:
   for DNS).
 
   --certbot-route53:auth-propagation-seconds CERTBOT_ROUTE53:AUTH_PROPAGATION_SECONDS
+                        The number of seconds to wait for DNS to propagate
+                        before asking the ACME server to verify the DNS
+                        record. (default: 10)
+
+certbot-rackspace:auth:
+  Obtain certificates using a DNS TXT record (if you are using Rackspace
+  CloudDNS for DNS).
+
+  --certbot-rackspace:auth-propagation-seconds CERTBOT_RACKSPACE:AUTH_PROPAGATION_SECONDS
                         The number of seconds to wait for DNS to propagate
                         before asking the ACME server to verify the DNS
                         record. (default: 10)
@@ -590,6 +601,15 @@ dns-route53:
   for DNS).
 
   --dns-route53-propagation-seconds DNS_ROUTE53_PROPAGATION_SECONDS
+                        The number of seconds to wait for DNS to propagate
+                        before asking the ACME server to verify the DNS
+                        record. (default: 10)
+
+dns-rackspace:
+  Obtain certificates using a DNS TXT record (if you are using Rackspace
+  CloudDNS for DNS).
+
+  --dns-rackspace-propagation-seconds DNS_RACKSPACE_PROPAGATION_SECONDS
                         The number of seconds to wait for DNS to propagate
                         before asking the ACME server to verify the DNS
                         record. (default: 10)

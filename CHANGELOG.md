@@ -298,6 +298,7 @@ https://github.com/certbot/certbot/issues?q=is%3Aissue+milestone%3A0.16.0+is%3Ac
   and Nginx plugins, these plugins are packaged separately and not included in
   Certbot by default. So far, we have plugins for
   [Amazon Route 53](https://pypi.python.org/pypi/certbot-dns-route53),
+  [Rackspace CloudDNS](https://pypi.python.org/pypi/certbot-dns-rackspace),
   [Cloudflare](https://pypi.python.org/pypi/certbot-dns-cloudflare),
   [DigitalOcean](https://pypi.python.org/pypi/certbot-dns-digitalocean), and
   [Google Cloud](https://pypi.python.org/pypi/certbot-dns-google) which all
