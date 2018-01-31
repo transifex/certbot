@@ -5,7 +5,6 @@ import six
 
 from certbot.plugins import common
 
-REDIRECT_DIRECTIVES = ['return', 'rewrite']
 ADD_HEADER_DIRECTIVE = 'add_header'
 
 class Addr(common.Addr):
@@ -192,15 +191,6 @@ class VirtualHost(object):  # pylint: disable=too-few-public-methods
                     self.enabled == other.enabled and
                     self.path == other.path)
 
-        return False
-
-    def has_redirect(self):
-        """Determine if this vhost has a redirecting statement
-        """
-        for directive_name in REDIRECT_DIRECTIVES:
-            found = _find_directive(self.raw, directive_name)
-            if found is not None:
-                return True
         return False
 
     def has_header(self, header_name):

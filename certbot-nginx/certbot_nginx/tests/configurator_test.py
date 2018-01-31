@@ -544,7 +544,6 @@ class NginxConfiguratorTest(util.NginxTest):
             self.config.enhance, "www.example.com",
             "ensure-http-header", "Strict-Transport-Security")
 
-
     @mock.patch('certbot_nginx.obj.VirtualHost.contains_list')
     def test_certbot_redirect_exists(self, mock_contains_list):
         # Test that we add no redirect statement if there is already a
